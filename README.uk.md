@@ -1,5 +1,7 @@
 **Read in other languages: [Русский](README.md), [Polski](README.pl.md).**
 
+[Макет в Figma](<https://www.figma.com/file/spS4P88J0rfxCOLjuVBsF2/Land-(Copy)>)
+
 # Parcel template
 
 Этот проект был создан при помощи Parcel. Для знакомства и настройки
