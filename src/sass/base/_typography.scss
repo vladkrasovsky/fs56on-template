@@ -1,0 +1,9 @@
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-text;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}

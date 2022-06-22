@@ -1,5 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/classes';
+
+@import './base/reset';
+@import './base/typography';

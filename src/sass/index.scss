@@ -1,3 +1,9 @@
 @import './common';
-@import './header';
-@import './hero';
+
+// components section
+@import './components/btn';
+
+// layout section
+@import './layout/header';
+@import './layout/hero';
+@import './layout/footer';
