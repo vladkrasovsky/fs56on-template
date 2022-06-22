@@ -1,7 +1,13 @@
 .title {
-  @include font(38px, 300, 1.26);
+  @include font(38px, 1.26, 300);
 }
 
+// colors
 .title--light {
   color: $color-text-lightest;
+}
+
+// sizes
+.title--large {
+  @include font(55px, 1.2, null);
 }
