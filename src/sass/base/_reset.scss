@@ -1,12 +1,12 @@
 // GENERAL CSS SETTINGS
 
 ::placeholder {
-  color: #666666;
+  color: $color-text-light;
 }
 
 ::selection {
   background-color: $color-accent;
-  color: #ffffff;
+  color: $color-text-lightest;
 }
 
 p,
