@@ -2,10 +2,13 @@
   // background-color: aqua;
 }
 .header__container {
+  padding-top: 11px;
+  padding-bottom: 11px;
   display: flex;
   position: absolute;
   z-index: 9;
   width: 100%;
+  align-items: center;
 
 
 }
@@ -21,6 +24,9 @@
     &--accent{
       color: $color-accent;
     }
+
+    margin-left: 49px;
+    margin-right: auto;
 }
 
 .header__item:not(:last-child) {
@@ -33,6 +39,7 @@
   display: flex;
   margin-right: 46px;
   margin-left: auto;
+  align-items: center;
 }
 
 
