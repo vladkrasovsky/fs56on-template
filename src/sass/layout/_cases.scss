@@ -1,2 +1,20 @@
 .cases {
 }
+
+.cases__list {
+  min-width: 1304px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  transform: translate(-8px, -8px);
+}
+
+.cases__line {
+  height: 42px;
+  background-color: rgb(201, 175, 170);
+}
+
+.cases__item {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
