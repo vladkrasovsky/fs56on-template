@@ -1,0 +1,17 @@
+.top-text {
+  @include font(20px, 1.65);
+}
+
+// colors
+.top-text--light {
+  color: $color-text-lightest;
+}
+
+.top-text--dark {
+  color: $color-text;
+}
+
+// sizes
+.top-text--large {
+  @include font(22px, 1.67);
+}
