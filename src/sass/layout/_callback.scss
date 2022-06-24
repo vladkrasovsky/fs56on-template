@@ -1,2 +1,40 @@
-.callback {
+
+.callback-div {
+    display: flex;
 }
+
+.form {
+    width: 680px;
+    height: 460px;
+    padding: 78px 30px 82px;
+
+    background-color: red;
+}
+
+.form__text {
+    margin-bottom: 34px;
+
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+
+    color: $color-text;
+}
+
+
+.callback-form__input {
+    width: 100%;
+}
+
+.callback-form__user-name {
+    position: relative;
+}
+
+.callback-form__name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+}
+
+
