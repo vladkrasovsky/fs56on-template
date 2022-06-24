@@ -1,2 +1,23 @@
 .team {
 }
+.person__cards {
+    @extend %list;
+}
+.person {
+}
+.person__thumb {
+}
+.person__img {
+}
+.person__overlay {
+}
+.socials {
+    @extend %list;
+}
+.socials__icon {
+    fill: $color-accent;
+}
+.person__name {
+}
+.person__position {
+}
