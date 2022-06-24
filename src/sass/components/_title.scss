@@ -7,6 +7,10 @@
   color: $color-text-lightest;
 }
 
+.title--dark {
+  color: $color-text;
+}
+
 // sizes
 .title--large {
   @include font(55px, 1.2, null);
