@@ -22,7 +22,7 @@
 
   /*  Установаем ширину окна  */
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -38,6 +38,42 @@
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
+  &__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: calc(48 / 38);
+    color: #212121;
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    text-align: center;
+
+    color: #333333;
+  }
+  &__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+
+    transition: fill $transition-duration $transition-animation;
+
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
 }
 
 /* Стили для активных классов подложки и окна */
@@ -46,16 +82,4 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
-}
-
-/* Стили для кнопки закрытия */
-
-.modal__cross {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: #444;
-  cursor: pointer;
 }
