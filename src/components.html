@@ -12,9 +12,16 @@
       }
       h2 {
         width: calc(50% - 50px);
-        padding: 0 15px;
         margin-bottom: 20px;
         background: green;
+      }
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+      h2 > a {
+        padding: 0 15px;
       }
       p {
         margin-bottom: 5px;
@@ -51,7 +58,7 @@
       <h1>Project Components</h1>
       <br />
       <section>
-        <h2>Buttons - .btn</h2>
+        <h2 id="buttons"><a href="#buttons"># Buttons - .btn</a></h2>
         <div class="block">
           <div class="block__item">
             <p>Default button with icon:</p>
@@ -106,7 +113,7 @@
         </div>
       </section>
       <section>
-        <h2>Titles - .title</h2>
+        <h2 id="titles"><a href="#titles"># Titles - .title</a></h2>
         <div class="block">
           <div class="block__item">
             <p>Main large title (h1):</p>
@@ -133,7 +140,7 @@
         </div>
       </section>
       <section>
-        <h2>Top Texts - .top-text</h2>
+        <h2 id="top-texts"><a href="#top-texts"># Top Texts - .top-text</a></h2>
         <div class="block">
           <div class="block__item">
             <p>Top text light:</p>
