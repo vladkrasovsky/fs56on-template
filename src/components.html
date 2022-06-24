@@ -4,14 +4,21 @@
     <include src="./partials/_meta.html"></include>
     <title>Project Components</title>
     <style>
+      h1,
       h2,
       h3,
       p {
         margin-top: 15px;
       }
+      h2 {
+        width: calc(50% - 50px);
+        padding: 0 15px;
+        margin-bottom: 20px;
+        background: green;
+      }
       p {
         margin-bottom: 5px;
-        font-size: 16px;
+        font-size: 15px;
         color: #aaa;
       }
       pre {
@@ -24,6 +31,7 @@
       section {
         padding-top: 20px;
         padding-bottom: 20px;
+        border-top: 2px dashed gray;
       }
       .block {
         display: flex;
@@ -33,14 +41,17 @@
         width: 50%;
         padding-right: 50px;
       }
+      .block__item > h3 {
+        margin-top: 0;
+      }
     </style>
   </head>
   <body style="background-color: #444; color: white">
     <div class="container">
       <h1>Project Components</h1>
-      <hr />
+      <br />
       <section>
-        <h2>Buttons</h2>
+        <h2>Buttons - .btn</h2>
         <div class="block">
           <div class="block__item">
             <p>Default button with icon:</p>
@@ -73,27 +84,77 @@
   &lt;svg class="btn__icon" width="9" height="18"&gt;
     &lt;use href="./images/icons.svg#icon-arrow" /&gt;
   &lt;/svg&gt;
-  &lt;span class="btn__text"&gt;.btn&lt;/span&gt;
+  &lt;span class="btn__text"&gt;Default button with icon&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+            <pre>
+&lt;a href="" class="btn btn--outline"&gt;
+  &lt;span class="btn__text"&gt;Outline default button&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+            <pre>
+&lt;a href="" class="btn btn--secondary btn--outline"&gt;
+  &lt;span class="btn__text"&gt;Outline secondary button&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+            <pre>
+&lt;a href="" class="btn btn--sm btn--100"&gt;
+  &lt;span class="btn__text"&gt;Full width small button&lt;/span&gt;
 &lt;/a&gt;</pre
             >
           </div>
         </div>
       </section>
       <section>
-        <h2>Titles</h2>
+        <h2>Titles - .title</h2>
         <div class="block">
           <div class="block__item">
             <p>Main large title (h1):</p>
             <div class="title title--large">Lorem ipsum dolor sit</div>
+
             <p>Section light title (h2):</p>
             <div class="title title--light">Lorem ipsum dolor sit</div>
+
             <p>Section dark title (h2):</p>
             <div class="title title--dark">Lorem ipsum dolor sit</div>
           </div>
           <div class="block__item">
             <h3>Example:</h3>
             <pre>
+&lt;h2 class="title title--large"&gt;Section title large dark&lt;/h2&gt;</pre
+            >
+            <pre>
+&lt;h2 class="title title--light"&gt;Section title light dark&lt;/h2&gt;</pre
+            >
+            <pre>
 &lt;h2 class="title title--dark"&gt;Section title dark&lt;/h2&gt;</pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Top Texts - .top-text</h2>
+        <div class="block">
+          <div class="block__item">
+            <p>Top text light:</p>
+            <div class="top-text top-text--light">Lorem ipsum dolor sit</div>
+
+            <p>Top text dark:</p>
+            <div class="top-text top-text--dark">Lorem ipsum dolor sit</div>
+
+            <p>Top text large:</p>
+            <div class="top-text top-text--large">Lorem ipsum dolor sit</div>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>
+&lt;p class="top-text top-text--light"&gt;Top text light&lt;/p&gt;</pre
+            >
+            <pre>
+&lt;p class="top-text top-text--dark"&gt;Top text dark&lt;/p&gt;</pre
+            >
+            <pre>
+&lt;p class="top-text top-text--large"&gt;Top text large&lt;/p&gt;</pre
             >
           </div>
         </div>
