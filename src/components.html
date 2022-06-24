@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <include src="./partials/_meta.html"></include>
+    <title>Project Components</title>
+    <style>
+      h2,
+      h3,
+      p {
+        margin-top: 15px;
+      }
+      p {
+        margin-bottom: 5px;
+        font-size: 16px;
+        color: #aaa;
+      }
+      pre {
+        padding: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+      }
+      section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .block__item:first-child {
+        width: 50%;
+        padding-right: 50px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #444; color: white">
+    <div class="container">
+      <h1>Project Components</h1>
+      <hr />
+      <section>
+        <h2>Buttons</h2>
+        <div class="block">
+          <div class="block__item">
+            <p>Default button with icon:</p>
+            <a href="" class="btn">
+              <svg class="btn__icon" width="9" height="18">
+                <use href="./images/icons.svg#icon-arrow" />
+              </svg>
+              <span class="btn__text">.btn</span>
+            </a>
+
+            <p>Outline default button:</p>
+            <a href="" class="btn btn--outline">
+              <span class="btn__text">.btn .btn--outline</span>
+            </a>
+
+            <p>Outline secondary button:</p>
+            <a href="" class="btn btn--secondary btn--outline">
+              <span class="btn__text">.btn .btn--secondary .btn--outline</span>
+            </a>
+
+            <p>Full width small button:</p>
+            <button class="btn btn--sm btn--100" type="button">
+              .btn .btn--sm .btn--100
+            </button>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>
+&lt;a href="" class="btn"&gt;
+  &lt;svg class="btn__icon" width="9" height="18"&gt;
+    &lt;use href="./images/icons.svg#icon-arrow" /&gt;
+  &lt;/svg&gt;
+  &lt;span class="btn__text"&gt;.btn&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Titles</h2>
+        <div class="block">
+          <div class="block__item">
+            <p>Main large title (h1):</p>
+            <div class="title title--large">Lorem ipsum dolor sit</div>
+            <p>Section light title (h2):</p>
+            <div class="title title--light">Lorem ipsum dolor sit</div>
+            <p>Section dark title (h2):</p>
+            <div class="title title--dark">Lorem ipsum dolor sit</div>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>
+&lt;h2 class="title title--dark"&gt;Section title dark&lt;/h2&gt;</pre
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
