@@ -1,0 +1,24 @@
+// USER VARIABLES SECTION
+
+// colors
+$color-accent: #28a745; // Accent Color
+$color-accent-dark: mix(black, $color-accent, 15%); // Dark accent color
+$color-secondary: #0284d0; // Secondary Color
+$color-secondary-dark: mix(black, $color-secondary, 15%); // Dark accent color
+$color-text: #333333; // Text Color
+$color-text-light: #808080; // Light text color
+$color-text-lightest: #ffffff; // Lightest text color
+
+// background colors
+$color-bg-light: #f4f4f4; // Light bg color
+$color-bg-lightest: #ffffff; // Lightest bg color
+$color-bg-dark: #333333; // Dark bg color
+
+// typography
+$font-stack: 'Open Sans', sans-serif; // User Font Family
+$font-size: 18px; // Body Font Size
+$line-height: 1.55; // Document Line Height
+
+// Transitions
+$transition-duration: 250ms;
+$transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
