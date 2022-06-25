@@ -127,7 +127,7 @@
 .js-open-modal:hover,
 .js-open-modal:focus {
   .js-open-modal__icon {
-    transform: scale(1.5);
-    // transition: transform 250ms linear;
+    transform: scale(2);
+    transition: transform 250ms linear;
   }
 }
