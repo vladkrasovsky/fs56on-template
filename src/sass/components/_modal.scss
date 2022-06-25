@@ -87,14 +87,18 @@
 // Стили и геометрия кнопки вызова Модального окна Hero
 
 .js-open-modal {
+  display: block;
   padding: 10px 30px;
-  width: 165px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   height: 48px;
 
   background: $color-accent;
   border-radius: 5px;
   text-decoration: none;
   &__text {
+    margin-left: 5px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
