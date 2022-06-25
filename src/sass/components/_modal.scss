@@ -83,3 +83,51 @@
   opacity: 1;
   visibility: visible;
 }
+
+// Стили и геометрия кнопки вызова Модального окна Hero
+
+.js-open-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: 48px;
+
+  background: $color-accent;
+  border-radius: 5px;
+  text-decoration: none;
+
+  transition: transform $transition-duration $transition-animation;
+
+  &__text {
+    margin-left: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    text-align: center;
+
+    color: $color-text-lightest;
+  }
+  &__thumb {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    position: absolute;
+    left: 21px;
+    fill: $color-text-lightest;
+  }
+}
+.js-open-modal:hover,
+.js-open-modal:focus {
+  .js-open-modal__icon {
+    transform: scale(2);
+    transition: transform 250ms linear;
+  }
+}
