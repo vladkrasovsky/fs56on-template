@@ -87,7 +87,9 @@
 // Стили и геометрия кнопки вызова Модального окна Hero
 
 .js-open-modal {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
   padding: 10px 30px;
   margin-left: auto;
   margin-right: auto;
@@ -97,6 +99,7 @@
   background: $color-accent;
   border-radius: 5px;
   text-decoration: none;
+
   &__text {
     margin-left: 5px;
     font-family: 'Open Sans';
@@ -109,7 +112,16 @@
 
     color: $color-text-lightest;
   }
+  &__thumb {
+    display: flex;
+    align-items: center;
+  }
   &__icon {
+    position: absolute;
+    left: 21px;
     fill: $color-text-lightest;
   }
+}
+.js-open-modal:hover,
+.js-open-modal:focus {
 }
