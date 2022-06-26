@@ -125,17 +125,20 @@
 
     color: $color-text-lightest;
   }
-   &--about(
-      &:hover,
-      &:focus{
-        color: grey;
+  &--about {
+    &:hover,
+    &:focus {
+      background-color: grey;
+    }
+  }
+
+  &--hero {
+    &:hover,
+    &:focus {
+      .modal-btn__icon {
+        transform: scale(2);
+        transition: transform $transition-duration $transition-animation;
       }
-    )
-}
-.modal-btn:hover,
-.modal-btn:focus {
-  .modal-btn__icon {
-    transform: scale(2);
-    transition: transform 250ms linear;
+    }
   }
 }
