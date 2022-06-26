@@ -91,8 +91,7 @@
   display: flex;
   align-items: center;
   padding: 10px 30px;
-  margin-left: auto;
-  margin-right: auto;
+
   width: 167px;
   height: 48px;
 
@@ -100,7 +99,8 @@
   border-radius: 5px;
   text-decoration: none;
 
-  transition: transform $transition-duration $transition-animation;
+  transition: background-color $transition-duration $transition-animation;
+  // transition: transform $transition-duration $transition-animation;
 
   &__thumb {
     display: flex;
@@ -126,13 +126,18 @@
     color: $color-text-lightest;
   }
   &--about {
+    margin-left: 0;
+    margin-right: auto;
+    border: 1px solid $color-bg-lightest;
     &:hover,
     &:focus {
-      background-color: grey;
+      background-color: $color-secondary;
     }
   }
 
   &--hero {
+    margin-left: auto;
+    margin-right: auto;
     &:hover,
     &:focus {
       .modal-btn__icon {
