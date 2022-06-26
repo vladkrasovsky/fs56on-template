@@ -10,7 +10,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  transition: $transition-duration $transition-animation;
 }
 
 /* Стили для модальных окон */
@@ -36,27 +36,23 @@
   text-align: center;
   padding: 30px;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: $color-bg-lightest;
   transition: 0.3s all;
   &__title {
-    font-family: $font-stack;
-    font-style: normal;
     font-weight: 300;
     font-size: 38px;
     line-height: calc(48 / 38);
-    color: #212121;
+    color: $color-text;
     margin-bottom: 40px;
   }
   &__text {
-    font-family: $font-stack;
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: calc(28 / 18);
 
     text-align: center;
 
-    color: #333333;
+    color: $color-text;
   }
   &__cross {
     width: 15px;
@@ -64,7 +60,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    fill: #444;
+    fill: $color-text;
     cursor: pointer;
 
     transition: fill $transition-duration $transition-animation;
@@ -86,64 +82,64 @@
 
 // Стили и геометрия кнопки вызова Модального окна Hero
 
-.modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 30px;
+// .modal-btn {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 10px 30px;
 
-  width: 167px;
-  height: 48px;
+//   width: 167px;
+//   height: 48px;
 
-  background: $color-accent;
-  border-radius: 5px;
-  text-decoration: none;
+//   background: $color-accent;
+//   border-radius: 5px;
+//   text-decoration: none;
 
-  transition: background-color $transition-duration $transition-animation;
+//   transition: background-color $transition-duration $transition-animation;
 
-  &__thumb {
-    display: flex;
-    align-items: center;
-  }
+//   &__thumb {
+//     display: flex;
+//     align-items: center;
+//   }
 
-  &__icon {
-    margin-right: 5px;
-    left: 21px;
-    fill: $color-text-lightest;
-    transition: transform $transition-duration $transition-animation,
-      transform 500ms $transition-animation;
-  }
+//   &__icon {
+//     margin-right: 5px;
+//     left: 21px;
+//     fill: $color-text-lightest;
+//     transition: transform $transition-duration $transition-animation,
+//       transform 500ms $transition-animation;
+//   }
 
-  &__text {
-    font-family: $font-stack;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: calc(28 / 18);
+//   &__text {
+//     font-family: $font-stack;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 18px;
+//     line-height: calc(28 / 18);
 
-    text-align: center;
+//     text-align: center;
 
-    color: $color-text-lightest;
-  }
-  &--about {
-    margin-left: 0;
-    margin-right: auto;
-    border: 1px solid $color-bg-lightest;
-    &:hover,
-    &:focus {
-      background-color: $color-secondary;
-    }
-  }
+//     color: $color-text-lightest;
+//   }
+//   &--about {
+//     margin-left: 0;
+//     margin-right: auto;
+//     border: 1px solid $color-bg-lightest;
+//     &:hover,
+//     &:focus {
+//       background-color: $color-secondary;
+//     }
+//   }
 
-  &--hero {
-    margin-left: auto;
-    margin-right: auto;
-    &:hover,
-    &:focus {
-      background-color: $color-secondary;
-      .modal-btn__icon {
-        transform: scale(1.5) translateX(-5px);
-      }
-    }
-  }
-}
+//   &--hero {
+//     margin-left: auto;
+//     margin-right: auto;
+//     &:hover,
+//     &:focus {
+//       background-color: $color-secondary;
+//       .modal-btn__icon {
+//         transform: scale(1.5) translateX(-5px);
+//       }
+//     }
+//   }
+// }
