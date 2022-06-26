@@ -71,7 +71,7 @@
 
     &:hover,
     &:focus {
-      fill: $color-accent;
+      fill: $color-secondary;
     }
   }
 }
@@ -87,8 +87,8 @@
 // Стили и геометрия кнопки вызова Модального окна Hero
 
 .modal-btn {
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px 30px;
 
@@ -100,7 +100,6 @@
   text-decoration: none;
 
   transition: background-color $transition-duration $transition-animation;
-  // transition: transform $transition-duration $transition-animation;
 
   &__thumb {
     display: flex;
@@ -108,13 +107,14 @@
   }
 
   &__icon {
-    position: absolute;
+    margin-right: 5px;
     left: 21px;
     fill: $color-text-lightest;
+    transition: transform $transition-duration $transition-animation,
+      transform 500ms $transition-animation;
   }
 
   &__text {
-    margin-left: 5px;
     font-family: $font-stack;
     font-style: normal;
     font-weight: 400;
@@ -140,9 +140,9 @@
     margin-right: auto;
     &:hover,
     &:focus {
+      background-color: $color-secondary;
       .modal-btn__icon {
-        transform: scale(2);
-        transition: transform $transition-duration $transition-animation;
+        transform: scale(1.5) translateX(-5px);
       }
     }
   }
