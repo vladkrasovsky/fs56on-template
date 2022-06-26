@@ -39,7 +39,7 @@
   background-color: #fff;
   transition: 0.3s all;
   &__title {
-    font-family: 'Open Sans';
+    font-family: $font-stack;
     font-style: normal;
     font-weight: 300;
     font-size: 38px;
@@ -48,7 +48,7 @@
     margin-bottom: 40px;
   }
   &__text {
-    font-family: 'Open Sans';
+    font-family: $font-stack;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -86,14 +86,14 @@
 
 // Стили и геометрия кнопки вызова Модального окна Hero
 
-.hero-modal-btn {
+.modal-btn {
   position: relative;
   display: flex;
   align-items: center;
   padding: 10px 30px;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
+  width: 167px;
   height: 48px;
 
   background: $color-accent;
@@ -102,9 +102,20 @@
 
   transition: transform $transition-duration $transition-animation;
 
+  &__thumb {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 21px;
+    fill: $color-text-lightest;
+  }
+
   &__text {
     margin-left: 5px;
-    font-family: 'Open Sans';
+    font-family: $font-stack;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -114,19 +125,16 @@
 
     color: $color-text-lightest;
   }
-  &__thumb {
-    display: flex;
-    align-items: center;
-  }
-  &__icon {
-    position: absolute;
-    left: 21px;
-    fill: $color-text-lightest;
-  }
+   &--about(
+      &:hover,
+      &:focus{
+        color: grey;
+      }
+    )
 }
-.hero-modal-btn:hover,
-.hero-modal-btn:focus {
-  .hero-modal-btn__icon {
+.modal-btn:hover,
+.modal-btn:focus {
+  .modal-btn__icon {
     transform: scale(2);
     transition: transform 250ms linear;
   }
