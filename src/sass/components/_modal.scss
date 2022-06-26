@@ -86,7 +86,7 @@
 
 // Стили и геометрия кнопки вызова Модального окна Hero
 
-.js-open-modal {
+.hero-modal-btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -124,9 +124,9 @@
     fill: $color-text-lightest;
   }
 }
-.js-open-modal:hover,
-.js-open-modal:focus {
-  .js-open-modal__icon {
+.hero-modal-btn:hover,
+.hero-modal-btn:focus {
+  .hero-modal-btn__icon {
     transform: scale(2);
     transition: transform 250ms linear;
   }
