@@ -55,19 +55,24 @@
     color: $color-text;
   }
   &__cross {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 20px;
     right: 20px;
     fill: $color-text;
     cursor: pointer;
 
-    transition: fill $transition-duration $transition-animation;
+    transition: fill $transition-duration $transition-animation,
+      border-color $transition-duration $transition-animation;
 
     &:hover,
     &:focus {
       fill: $color-secondary;
+      border-color: $color-secondary;
     }
   }
 }
@@ -79,67 +84,3 @@
   opacity: 1;
   visibility: visible;
 }
-
-// Стили и геометрия кнопки вызова Модального окна Hero
-
-// .modal-btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 10px 30px;
-
-//   width: 167px;
-//   height: 48px;
-
-//   background: $color-accent;
-//   border-radius: 5px;
-//   text-decoration: none;
-
-//   transition: background-color $transition-duration $transition-animation;
-
-//   &__thumb {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   &__icon {
-//     margin-right: 5px;
-//     left: 21px;
-//     fill: $color-text-lightest;
-//     transition: transform $transition-duration $transition-animation,
-//       transform 500ms $transition-animation;
-//   }
-
-//   &__text {
-//     font-family: $font-stack;
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 18px;
-//     line-height: calc(28 / 18);
-
-//     text-align: center;
-
-//     color: $color-text-lightest;
-//   }
-//   &--about {
-//     margin-left: 0;
-//     margin-right: auto;
-//     border: 1px solid $color-bg-lightest;
-//     &:hover,
-//     &:focus {
-//       background-color: $color-secondary;
-//     }
-//   }
-
-//   &--hero {
-//     margin-left: auto;
-//     margin-right: auto;
-//     &:hover,
-//     &:focus {
-//       background-color: $color-secondary;
-//       .modal-btn__icon {
-//         transform: scale(1.5) translateX(-5px);
-//       }
-//     }
-//   }
-// }
