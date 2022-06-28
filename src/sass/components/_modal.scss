@@ -54,26 +54,48 @@
 
     color: $color-text;
   }
-  &__cross {
-    width: 20px;
-    height: 20px;
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
 
     border-radius: 50%;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    fill: $color-text;
-    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
-    transition: fill $transition-duration $transition-animation,
-      border-color $transition-duration $transition-animation;
+    transition: background-color $transition-duration $transition-animation,
+      border-color$transition-duration $transition-animation;
 
     &:hover,
     &:focus {
-      fill: $color-secondary;
-      border-color: $color-secondary;
+      background-color: $color-text-light;
+      border-color: $color-text-light;
+      .modal__cross {
+        fill: $color-text-lightest;
+        transform: rotateZ(360deg);
+      }
     }
+  }
+  &__envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__cross {
+    fill: $color-text-light;
+    cursor: pointer;
+
+    transition: fill $transition-duration $transition-animation,
+      transform $transition-duration $transition-animation;
   }
 }
 
