@@ -17,12 +17,26 @@
           illum dolore explicabo ab dolores itaque rerum temporibus doloribus
           iste maiores deleniti?
         </p>
-        <button class="about__btn btn" type="button">Read More</button>
+
+        <!-- Modal -->
+
+        <a
+          href="#"
+          class="js-open-modal modal-btn modal-btn--about"
+          data-modal="2"
+        >
+          <span class="modal-btn__text">Read More</span>
+        </a>
+        <include src="./partials/modals/modal-about.html"></include>
+
+        <!-- <button class="about__btn btn" type="button">Read More</button> -->
       </div>
     </div>
 
-    <!-- Modal -->
-    <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a>
-    <include src="./partials/modals/modal-about.html"></include>
+    <!-- Modal
+    <a href="#" class="js-open-modal modal-btn modal-btn--about" data-modal="2">
+      <span class="modal-btn__text">Read More</span>
+    </a>
+    <include src="./partials/modals/modal-about.html"></include> -->
   </div>
 </section>

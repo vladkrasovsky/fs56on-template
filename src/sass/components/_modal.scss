@@ -10,7 +10,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  transition: $transition-duration $transition-animation;
 }
 
 /* Стили для модальных окон */
@@ -36,43 +36,66 @@
   text-align: center;
   padding: 30px;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: $color-bg-lightest;
   transition: 0.3s all;
   &__title {
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 300;
     font-size: 38px;
     line-height: calc(48 / 38);
-    color: #212121;
+    color: $color-text;
     margin-bottom: 40px;
   }
   &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: calc(28 / 18);
 
     text-align: center;
 
-    color: #333333;
+    color: $color-text;
   }
-  &__cross {
-    width: 15px;
-    height: 15px;
+  &__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    fill: #444;
-    cursor: pointer;
+    top: 25px;
+    right: 25px;
+    padding: 0;
+    margin: 0;
 
-    transition: fill $transition-duration $transition-animation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: background-color $transition-duration $transition-animation,
+      border-color$transition-duration $transition-animation;
 
     &:hover,
     &:focus {
-      fill: $color-accent;
+      background-color: $color-text-light;
+      border-color: $color-text-light;
+      .modal__cross {
+        fill: $color-text-lightest;
+        transform: rotateZ(360deg);
+      }
     }
+  }
+  &__envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__cross {
+    fill: $color-text-light;
+    cursor: pointer;
+
+    transition: fill $transition-duration $transition-animation,
+      transform $transition-duration $transition-animation;
   }
 }
 
@@ -82,52 +105,4 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
-}
-
-// Стили и геометрия кнопки вызова Модального окна Hero
-
-.js-open-modal {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 10px 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  height: 48px;
-
-  background: $color-accent;
-  border-radius: 5px;
-  text-decoration: none;
-
-  transition: transform $transition-duration $transition-animation;
-
-  &__text {
-    margin-left: 5px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: calc(28 / 18);
-
-    text-align: center;
-
-    color: $color-text-lightest;
-  }
-  &__thumb {
-    display: flex;
-    align-items: center;
-  }
-  &__icon {
-    position: absolute;
-    left: 21px;
-    fill: $color-text-lightest;
-  }
-}
-.js-open-modal:hover,
-.js-open-modal:focus {
-  .js-open-modal__icon {
-    transform: scale(2);
-    transition: transform 250ms linear;
-  }
 }
