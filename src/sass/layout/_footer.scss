@@ -1,2 +1,34 @@
 .footer {
+  text-align: center;
+  background-color: $color-bg-dark;
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+  &__title {
+    @extend .visually-hidden;
+  }
+  &__list {
+    @extend %list;
+    @include centeredFlex();
+    margin-bottom: 10px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+  &__link {
+    @include centeredFlex();
+    color: $color-text-lightest;
+    fill: currentColor;
+    cursor: pointer;
+
+    transition: fill $transition-duration;
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
+  &__text {
+    color: $color-text-lightest;
+  }
 }
