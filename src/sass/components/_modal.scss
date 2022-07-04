@@ -1,3 +1,53 @@
+// Breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1360px;
+
+// Breakpoints Map
+$breakpoints: (
+  'mobile': (
+    max-width: $mobile,
+  ),
+  'tablet': (
+    max-width: $tablet,
+  ),
+  'desktop': (
+    max-width: $desktop,
+  ),
+) !default;
+
+/// Mixin to manage responsive breakpoints
+///
+/// @author Kitty Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// @include
+@include respond-to('mobile') {
+}
+
+@include respond-to('tablet') {
+}
+
+@include respond-to('desktop') {
+}
+
+// Modal Window Styles
 .overlay {
   /* Скрываем подложку  */
   opacity: 0;
@@ -21,8 +71,13 @@
   visibility: hidden;
 
   /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 800px;
+
+  // width: 800px;
+  @include respond-to('mobile') {
+    width: 90vw;
+    height: 90vh;
+    // padding: 15px;
+  }
 
   /*  Центрируем и задаем z-index */
   position: fixed;
