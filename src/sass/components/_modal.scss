@@ -50,16 +50,19 @@ $breakpoints: (
 // Modal Window Styles
 .overlay {
   /* Скрываем подложку  */
+
   opacity: 0;
   visibility: hidden;
 
   position: fixed;
+  // padding: 94px 15px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
+  overflow-y: scroll;
   transition: $transition-duration $transition-animation;
 }
 
@@ -72,11 +75,20 @@ $breakpoints: (
 
   /*  Установаем ширину окна  */
 
-  // width: 800px;
+  width: 528px;
+  height: 581px;
+
+  @include respond-to('tablet') {
+    max-width: 450px;
+    max-height: 609px;
+    width: 95vw;
+    height: 95vh;
+  }
+
   @include respond-to('mobile') {
-    width: 90vw;
-    height: 90vh;
-    // padding: 15px;
+    max-width: 290px;
+    width: 95vw;
+    height: 95vh;
   }
 
   /*  Центрируем и задаем z-index */
@@ -96,6 +108,13 @@ $breakpoints: (
   &__title {
     font-weight: 300;
     font-size: 38px;
+    @include respond-to('tablet') {
+      font-size: 1.6rem;
+    }
+    @include respond-to('mobile') {
+      font-size: 1.2rem;
+    }
+
     line-height: calc(48 / 38);
     color: $color-text;
     margin-bottom: 40px;
@@ -103,6 +122,13 @@ $breakpoints: (
   &__text {
     font-weight: 400;
     font-size: 18px;
+    @include respond-to('tablet') {
+      font-size: 0.8rem;
+    }
+    @include respond-to('mobile') {
+      font-size: 0.6rem;
+    }
+
     line-height: calc(28 / 18);
 
     text-align: center;
@@ -113,6 +139,14 @@ $breakpoints: (
     position: absolute;
     top: 25px;
     right: 25px;
+    @include respond-to('tablet') {
+      top: 20px;
+      right: 20px;
+    }
+    @include respond-to('mobile') {
+      top: 15px;
+      right: 15px;
+    }
     padding: 0;
     margin: 0;
 
