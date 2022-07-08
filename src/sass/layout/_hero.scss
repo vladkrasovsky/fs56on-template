@@ -21,3 +21,9 @@
 .hero__text {
   margin-bottom: 29px;
 }
+
+.animate__pulse {
+  animation: pulse;
+  animation-duration: 1300ms;
+  animation-iteration-count: infinite;
+}
