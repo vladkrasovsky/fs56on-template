@@ -11,6 +11,10 @@
        clip: rect(0 0 0 0);
        overflow: hidden;
 }
+.benefits-list {
+    @extend %list;
+     @include centeredFlex();
+}
 
 .benefits-list__title {
     font-family: 'Open Sans';
