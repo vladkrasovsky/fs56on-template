@@ -1,26 +1,56 @@
+.benefits {
+    background: $color-bg-light;
+    border-radius: 0px;
+    
+
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 19px;
+    }
+}
+
 .benefits-list {
-    @extend %list;
-     @include centeredFlex();
-}
+   @extend %list;
+   text-align: center;
+    @include centeredFlex();
 
-.benefits-list__title {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.56;
-    text-align: center;
+   &__title {
+    @include font (20px, 1.65, normal, null);
+    color: $color-bg-dark;
     margin-bottom: 16px;
-    color: #333333;
+   }
+
+   &__text {
+    @include font (18px, 1.56, normal, null);
+    color: $color-bg-dark;
+   }
+
+   
+ &__link {
+     @include centeredFlex();
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: $color-text-lightest;
+    background-color: $color-accent;
+    border-radius: 50%;
+    transition: $transition-duration,
+    $transition-animation;
+         &:hover,
+         &:focus {
+           background-color: $color-accent-dark;
+           color: $color-text-lightest;
+         }
+     
+ }
+
+ &__icon {
+    fill: currentColor;
+ }
 }
 
-.benefits-list__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    text-align: center;
-    color: #333333;
-}
+
+
+
 
