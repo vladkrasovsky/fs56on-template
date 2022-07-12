@@ -1,3 +1,8 @@
+.benefits-list {
+    @extend %list;
+     @include centeredFlex();
+}
+
 .benefits-list__title {
     font-family: 'Open Sans';
     font-style: normal;
