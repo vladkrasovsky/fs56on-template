@@ -15,22 +15,23 @@ padding: 0 20px;
     gap: 20px;
 }
 .person {
-    width: 100%;
-    @media screen and (min-width:768px) and (max-width:1300px) {
+    @media screen and (min-width:768px) {
         width: calc((100% - 40px) /3);
     }
-    transition-property: box-shadow;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-animation;
+
 }
 .person__thumb {
     width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
+    transition-property: box-shadow, transform;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-animation;
     &:hover,
     &:focus {
         box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
     }
 }
 

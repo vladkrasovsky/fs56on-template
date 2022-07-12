@@ -1,40 +1,61 @@
 
-.callback-div {
+.callback__container {
     display: flex;
 }
 
-.form {
-    width: 680px;
-    height: 460px;
-    padding: 78px 30px 82px;
-
-    background-color: red;
+.callback__img, .callback__form {
+    width: 50%;
 }
 
-.form__text {
-    margin-bottom: 34px;
+.callback__img img {
+    height: 100%;
+}
 
-    font-weight: 300;
-    font-size: 38px;
-    line-height: 1.26;
+.callback__form {
+    padding: 78px 30px 82px;
+    background: #F4F4F4;
+    border-radius: 0px;
+}
 
+.callback__text {
+    margin-bottom: 34px;  
+    text-align: left;
     color: $color-text;
 }
 
-
-.callback-form__input {
-    width: 100%;
-}
-
-.callback-form__user-name {
+.form__field {
     position: relative;
 }
 
-.callback-form__name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(0);
+.form .name {
+    margin-bottom: 36px;
+}
+.form .email {
+    margin-bottom: 60px;
 }
 
+.form__input {
+    width: 100%;
+    padding: 6px 5px 5px;
+    border: none;
+}
 
+.form__label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #808080;
+
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+
+}
+
+.form__input:focus + .form__label, 
+.form__input:not(:placeholder-shown) + .form__label {
+   transform: translateY(-45px);
+}
