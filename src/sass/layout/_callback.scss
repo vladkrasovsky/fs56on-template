@@ -1,20 +1,34 @@
 
 .callback__container {
-    display: flex;
+    @media screen and (max-width: 320px) {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
 }
 
 .callback__img, .callback__form {
-    width: 50%;
+    @media screen and (max-width: #{$tablet - 0.02}) {
+        max-width: 767px;
+    }
 }
 
 .callback__img img {
+    width: 100%;
     height: 100%;
 }
 
 .callback__form {
-    padding: 78px 30px 82px;
+
+    padding: 26px 30px 30px;
     background: #F4F4F4;
     border-radius: 0px;
+
+
+    // padding: 78px 30px 82px;
+    
 }
 
 .callback__text {
@@ -31,7 +45,7 @@
     margin-bottom: 36px;
 }
 .form .email {
-    margin-bottom: 60px;
+    margin-bottom: 53px;
 }
 
 .form__input {
