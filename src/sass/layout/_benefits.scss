@@ -44,38 +44,3 @@
 
 
 
-.benefits-list__icon {}
-
-// .benefits-list {
-//    @extend %list;
-//    display: flex;
-
-//    &__itme {
-//     display: flex;
-//     flex-direction: column;
-//     text-align: center;
-//    }
-
-//    &__title {
-//     @include font (20px, 1.65, normal, null);
-//     color: $color-bg-dark;
-//     margin-bottom: 16px;
-//    }
-
-//    &__text {
-//     @include font (18px, 1.56, normal, null);
-//     color: $color-bg-dark;
-//    }
-
-
-//  &__icon {
-//      @include centeredFlex();
-//     width: 67px;
-//     height: 67px;
-//     padding: 15px 16px 17px;
-//     margin-bottom: 15px;
-//     fill: $color-text-lightest;
-//     background-color: $color-accent;
-//     border-radius: 50%;
-//          }
-//  }
