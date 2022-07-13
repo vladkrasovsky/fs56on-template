@@ -11,7 +11,7 @@
 
 .benefits-list {
    @extend %list;
-   text-align: center;
+  //  text-align: center;
     @include centeredFlex();
 
    &__itme {
@@ -36,7 +36,6 @@
      @include centeredFlex();
     width: 67px;
     height: 67px;
-    margin-top: 40px;
     margin-bottom: 15px;
     color: $color-text-lightest;
     background-color: $color-accent;
