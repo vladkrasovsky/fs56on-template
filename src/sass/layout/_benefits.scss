@@ -1,59 +1,57 @@
 .benefits {
-    background: $color-bg-light;
-    border-radius: 0px;
-    
+  background: $color-bg-light;
+  border-radius: 0px;
 
-    &__container {
-        padding-top: 40px;
-        padding-bottom: 19px;
-    }
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 19px;
+  }
 }
+
 
 .benefits-list {
-   @extend %list;
-  //  text-align: center;
-    @include centeredFlex();
+  @extend %list;
+  display: flex;
+}
 
-   &__itme {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-   }
-    
-   &__title {
-    @include font (20px, 1.65, normal, null);
-    color: $color-bg-dark;
-    margin-bottom: 16px;
-   }
-
-   &__text {
-    @include font (18px, 1.56, normal, null);
-    color: $color-bg-dark;
-   }
-
-   
- &__link {
-     @include centeredFlex();
-    width: 67px;
-    height: 67px;
-    margin-bottom: 15px;
-    color: $color-text-lightest;
-    background-color: $color-accent;
-    border-radius: 50%;
-    transition: $transition-duration,
-    $transition-animation;
-         &:hover,
-         &:focus {
-           background-color: $color-accent-dark;
-           color: $color-text-lightest;
-         }
- }
-
- &__icon {
-    fill: currentColor;
- }
+.benefits-list__itme {
+   @include centeredFlex();
+  // display: flex;
+  // flex-direction: column;
+  // text-align: center;
 }
 
 
+// .benefits-list {
+//    @extend %list;
+//    display: flex;
+
+//    &__itme {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//    }
+
+//    &__title {
+//     @include font (20px, 1.65, normal, null);
+//     color: $color-bg-dark;
+//     margin-bottom: 16px;
+//    }
+
+//    &__text {
+//     @include font (18px, 1.56, normal, null);
+//     color: $color-bg-dark;
+//    }
 
 
+//  &__icon {
+//      @include centeredFlex();
+//     width: 67px;
+//     height: 67px;
+//     padding: 15px 16px 17px;
+//     margin-bottom: 15px;
+//     fill: $color-text-lightest;
+//     background-color: $color-accent;
+//     border-radius: 50%;
+//          }
+//  }
